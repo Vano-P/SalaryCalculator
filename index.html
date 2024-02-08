@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    <meta name="keywords" content="description">-->
+    <!--    <meta name="description" content="description">-->
+    <meta name="author" content="V. Poghosyan">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <title>Salary Calculator</title>
+        <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+
+<body>
+
+<section class="calculator">
+    <h1 class="calculator__title">Salary Calculator</h1>
+    <form class="calc">
+        <label class="calc__label">How many days did you work?
+            <input class="calc__input days" type="text" placeholder="Example: 24">
+        </label>
+        <label class="calc__label">How many hours did you work per day?
+            <input class="calc__input hours" type="text" placeholder="Example: 6">
+        </label>
+        <label class="calc__label">How much does your hour of work cost?
+            <input class="calc__input price" type="text" placeholder="Example: 100">
+        </label>
+        <div class="calc__priceValue">
+            <label>AMD
+                <input class="calc__priceValue-item" type="radio" name="priceValue" value="amd" checked>
+            </label>
+            <label>RUB
+                <input class="calc__priceValue-item" type="radio" name="priceValue" value="rub">
+            </label>
+            <label>USD
+                <input class="calc__priceValue-item" type="radio" name="priceValue" value="usd">
+            </label>
+        </div>
+        <input class="calc__button calculate" type="button" value="Calculate">
+        <label class="calc__label salary"></label>
+    </form>
+</section>
+<section class="modal">
+    <article class="modal__window">
+        <span class="modal__close"></span>
+        <p class="modal__description"></p>
+    </article>
+</section>
+
+<noscript>Please enable JavaScript in your browser</noscript>
+<script src="./assets/script.js"></script>
+</body>
+</html>

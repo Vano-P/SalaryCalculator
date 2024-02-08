@@ -1,0 +1,132 @@
+/*---------- Normalize ----------*/
+@import 'Normalize';
+
+body {
+  background-color: #535959;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: #317b7c;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  &__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #111; //fix
+  }
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.2rem;
+  }
+
+  &__input {
+    border: 0;
+    outline: 0;
+    padding: .5rem;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+    box-sizing: border-box;
+
+    &:focus {border: 1px solid #45e43a;}
+  }
+
+  &__button {
+    align-self: flex-end;
+    padding: .5rem 3rem;
+    outline: 0;
+    border-radius: .2rem;
+    border: 1px solid #45e43a;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s ease;
+    &:hover {background-color: #45e43a;}
+  }
+  &__priceValue {
+    padding: 0 .4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+
+  &__window {
+    width: 20vw;
+    min-height: 10vh;
+    background-color: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(1rem);
+    padding: 1rem 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: auto;
+  }
+
+  &__close {
+    width: 1rem;
+    height: 1rem;
+    align-self: flex-end;
+    position: relative;
+    cursor: pointer;
+
+    &:before, &:after {
+      content: '';
+      width: 1rem;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      rotate: 45deg;
+      translate: .3rem;
+    }
+    &:before {rotate: -45deg;}
+
+  }
+
+  &__description {
+    color: red;
+  }
+
+  &__active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+@media screen and (max-width: 800px) {body {padding: 1rem;}}
